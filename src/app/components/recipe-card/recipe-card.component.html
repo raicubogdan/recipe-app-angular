@@ -1,0 +1,15 @@
+<div class="p-4 bg-fourth flex justify-between items-center">
+  <div class="flex flex-col gap-4">
+    <p [innerText]="recipe.title" class="font-bold">Title</p>
+    <p [innerText]="recipe.description">Description</p>
+  </div>
+
+  <div class="flex gap-2">
+    <mat-icon (click)="deleteRecipe(recipe.id)" class="hover:cursor-pointer"
+      >delete</mat-icon
+    >
+    <mat-icon (click)="navigateToEdit(recipe.id)" class="hover:cursor-pointer"
+      >edit</mat-icon
+    >
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<p class="my-10 text-xl text-center">Recipes</p>
+
+<div class="flex flex-col space-y-6 items-center">
+  <button (click)="navigateToCreate()" class="p-4 border-2 border-second">
+    Create new recipe
+  </button>
+  <div *ngFor="let recipe of recipes" class="w-full">
+    <app-recipe-card [recipe]="recipe" />
+  </div>
+</div>

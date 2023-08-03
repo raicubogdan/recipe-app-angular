@@ -1,0 +1,94 @@
+<p class="my-10 text-xl text-center">Create Recipe</p>
+
+<form
+  [formGroup]="recipeForm"
+  (ngSubmit)="onSubmit()"
+  class="p-4 flex flex-col gap-4 [&>input]:text-black"
+>
+  <div>
+    <label>Title</label>
+
+    <input
+      formControlName="title"
+      class="p-2 w-full bg-first border-2 border-second"
+      type="text"
+      placeholder="Title"
+    />
+
+    <span
+      class="text-red-500"
+      *ngIf="
+        recipeForm.get('title')?.invalid && recipeForm.get('title')?.touched
+      "
+      >Required</span
+    >
+  </div>
+
+  <div>
+    <label>Description</label>
+    <input
+      formControlName="description"
+      class="p-2 w-full bg-first border-2 border-second"
+      type="text"
+      placeholder="Description"
+    />
+
+    <span
+      class="text-red-500"
+      *ngIf="
+        recipeForm.get('description')?.invalid &&
+        recipeForm.get('description')?.touched
+      "
+      >Required</span
+    >
+  </div>
+
+  <div>
+    <label>Ingredients</label>
+    <input
+      formControlName="ingredients"
+      class="p-2 w-full bg-first border-2 border-second"
+      type="text"
+      placeholder="Ingredients"
+    />
+
+    <span
+      class="text-red-500"
+      *ngIf="
+        recipeForm.get('ingredients')?.invalid &&
+        recipeForm.get('ingredients')?.touched
+      "
+      >Required</span
+    >
+  </div>
+
+  <div>
+    <label>Instructions</label>
+    <textarea
+      formControlName="instructions"
+      class="p-2 w-full bg-first border-2 border-second"
+      type="text"
+      placeholder="Instructions"
+      rows="10"
+    ></textarea>
+
+    <span
+      class="text-red-500"
+      *ngIf="
+        recipeForm.get('instructions')?.invalid &&
+        recipeForm.get('instructions')?.touched
+      "
+      >Required</span
+    >
+  </div>
+
+  <button
+    [disabled]="!recipeForm.valid"
+    type="submit"
+    class="p-4 border-2 border-second {{
+      !recipeForm.valid ? 'cursor-not-allowed' : ''
+    }}"
+  >
+    Submit
+  </button>
+</form>
