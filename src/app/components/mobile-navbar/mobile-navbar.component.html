@@ -1,7 +1,10 @@
 <div
   class="md:hidden flex fixed w-full justify-between border-b-2 border-b-second p-2 bg-first px-4 z-10"
 >
-  <p class="text-xl">recipes</p>
+  <a routerLink="/">
+    <p class="text-xl">recipes</p>
+  </a>
+
   <button (click)="onToggleClick()">
     <mat-icon class="hover:cursor-pointer">menu</mat-icon>
   </button>

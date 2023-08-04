@@ -6,7 +6,7 @@
   class="p-4 flex flex-col gap-4 [&>input]:text-black"
 >
   <div>
-    <label>Title</label>
+    <label after=" *" class="after:content-[attr(after)]">Title</label>
 
     <input
       formControlName="title"
@@ -25,7 +25,7 @@
   </div>
 
   <div>
-    <label>Description</label>
+    <label after=" *" class="after:content-[attr(after)]">Description</label>
     <input
       formControlName="description"
       class="p-2 w-full bg-first border-2 border-second"
@@ -44,7 +44,7 @@
   </div>
 
   <div>
-    <label>Ingredients</label>
+    <label after=" *" class="after:content-[attr(after)]">Ingredients</label>
     <input
       formControlName="ingredients"
       class="p-2 w-full bg-first border-2 border-second"
@@ -63,7 +63,7 @@
   </div>
 
   <div>
-    <label>Instructions</label>
+    <label after=" *" class="after:content-[attr(after)]">Instructions</label>
     <textarea
       formControlName="instructions"
       class="p-2 w-full bg-first border-2 border-second"

@@ -18,9 +18,7 @@ export class RecipeCardComponent {
   constructor(private apiService: ApiService, private router: Router) {}
 
   deleteRecipe(id: string): void {
-    this.apiService.deleteRecipe(id).subscribe(() => {
-      window.location.reload()
-    })
+    this.apiService.deleteRecipe(id).subscribe(() => {})
   }
 
   navigateToEdit(id: string): void {

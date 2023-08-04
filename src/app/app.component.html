@@ -1,7 +1,9 @@
 <div class="w-full items-start font-varela text-second h-screen bg-first">
   <app-navbar />
 
-  <app-mobile-navbar (toggleIsVisible)="toggleIsVisible()" />
+  <app-mobile-navbar
+    (toggleIsMobileMenuVisible)="toggleIsMobileMenuVisible()"
+  />
 
   <app-mobile-menu [isMobileMenuVisible]="isMobileMenuVisible" />
 

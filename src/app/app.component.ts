@@ -9,7 +9,7 @@ export class AppComponent {
 
   isMobileMenuVisible = false
 
-  toggleIsVisible() {
+  toggleIsMobileMenuVisible() {
     this.isMobileMenuVisible = !this.isMobileMenuVisible
   }
 }

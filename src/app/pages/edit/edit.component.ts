@@ -7,7 +7,6 @@ import { Recipe } from 'src/app/components/recipe-card/recipe-card.component'
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss'],
 })
 export class EditComponent implements OnInit {
   recipeId: string | null // Assuming you get the recipeId from the route parameter
@@ -29,9 +28,11 @@ export class EditComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.apiService.getAllRecipes().subscribe((recipes) => {
-      this.recipe = recipes.filter((recipe) => recipe.id === this.recipeId)[0]
-      this.populateForm()
+    this.apiService.getAllRecipes().subscribe({
+      next: (recipes) => {
+        this.recipe = recipes.filter((recipe) => recipe.id === this.recipeId)[0]
+        this.populateForm()
+      },
     })
   }
 

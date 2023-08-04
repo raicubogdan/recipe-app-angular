@@ -7,7 +7,6 @@ import { v4 as uuid } from 'uuid'
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss'],
 })
 export class CreateComponent {
   constructor(
@@ -39,8 +38,10 @@ export class CreateComponent {
             title,
             id: uuid(),
           })
-          .subscribe(() => {
-            this.router.navigateByUrl('/')
+          .subscribe({
+            next: () => {
+              this.router.navigateByUrl('/')
+            },
           })
       }
     }

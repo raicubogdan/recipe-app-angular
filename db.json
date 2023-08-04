@@ -1,11 +1,11 @@
 {
   "recipes": [
     {
-      "description": "description",
-      "ingredients": "ingredients",
-      "instructions": "instructions",
-      "title": "woohoo",
-      "id": "56e3ea4d-7693-4157-9f13-0ee189d49dea"
+      "description": "recipe",
+      "ingredients": "with ingredients",
+      "instructions": "some instructions",
+      "title": "new",
+      "id": "7c38caef-d6d2-48fd-8a5b-3941ce285b14"
     }
   ]
 }

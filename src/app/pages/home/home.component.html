@@ -1,10 +1,17 @@
 <p class="my-10 text-xl text-center">Recipes</p>
 
-<div class="flex flex-col space-y-6 items-center">
+<div class="flex flex-col space-y-6 items-center px-4">
   <button (click)="navigateToCreate()" class="p-4 border-2 border-second">
     Create new recipe
   </button>
-  <div *ngFor="let recipe of recipes" class="w-full">
-    <app-recipe-card [recipe]="recipe" />
-  </div>
+
+  <div *ngIf="loading$ | async">loading...</div>
+
+  <ng-container *ngIf="!(loading$ | async)">
+    <div *ngFor="let recipe of recipes" class="w-full">
+      <app-recipe-card [recipe]="recipe" />
+    </div>
+  </ng-container>
+
+  <div *ngIf="error" [innerText]="error"></div>
 </div>
